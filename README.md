@@ -3,7 +3,7 @@
 * 比赛名称：面向小样本条件场景自适应及在线更新需求的无线AI设计
 * 赛题简介：小样本信道数据压缩，比赛的主要特点是样本少（1000个样本），线上线下分布不一致，考察如何在小样本的场景中解决训练集与实际场景分布不一致的问题
 * 比赛地址：https://www.datafountain.cn/competitions/624/ranking?isRedance=0&sch=2061
-* 成绩：  
+* 成绩：第六  
 <img src="https://github.com/liangoy/csi_compression_oppo/blob/main/score.png" width="70%" height="70%" /> 
 
 ## 模型思路
