@@ -10,9 +10,9 @@
 ### 第一类型的模型
 
 这个类型的模型有三个，分别是modelDesign中的encoder1、encoder2、encoder3。这三个的结构都是类似的。都采用背景法建模，背景法的原理在于：从零还原数据难度大，但是从相似数据中还原数据难度小，具体的模型结构如下图所示：
-![enter image description here](https://github.com/liangoy/csi_compression_oppo/blob/main/encoder.jpg)
+<img src="https://github.com/liangoy/csi_compression_oppo/blob/main/encoder.jpg" width="50%" height="50%" />
 图表 1编码器结构
-![enter image description here](https://github.com/liangoy/csi_compression_oppo/blob/main/decoder.jpg)
+<img src="https://github.com/liangoy/csi_compression_oppo/blob/main/decoder.jpg" width="50%" height="50%" />
 图表 2解码器结构
 
 下面简单介绍一下encoder1、encoder2与encoder3的区别
@@ -35,7 +35,7 @@ Encoder3的背景集合来自H.mat。H.mat有1000个样本，每个样本有52�
 
 encoder0与encoder1结构类似，区别在于encoder0没有背景相关的结构以及在训练的时候，为了使得encoder0具有强的泛化能力，我们在训练的时候加入一个额外的损失即样本的还原数据间的余弦相似度，这个余弦相似度越小表明还样本原数据越散，泛化能力越强。
 
-Encoder4不需要训练，其压缩流程为，求出13*8的csi复矩阵的最大特征向量，这个最大特征向量维度为8，需要用16个浮点数记录。我们对各个浮点数进行分箱达到压缩的目的。
+Encoder4不需要训练，其压缩流程为，求出13\*8的csi复矩阵的最大特征向量，这个最大特征向量维度为8，需要用16个浮点数记录。我们对各个浮点数进行分箱达到压缩的目的。
 
 ### 求最优值
 
