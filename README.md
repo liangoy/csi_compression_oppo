@@ -1,5 +1,6 @@
 
 
+
 ## 模型思路
 
 在比赛前期提交的时候，发现线上线下分数差异很大。我们认为线上测试集中存在两种数据，一是见过的数据（与训练集类似的数据），二是没见过的数据（与训练集分布距离大的数据）。
@@ -9,9 +10,9 @@
 ### 第一类型的模型
 
 这个类型的模型有三个，分别是modelDesign中的encoder1、encoder2、encoder3。这三个的结构都是类似的。都采用背景法建模，背景法的原理在于：从零还原数据难度大，但是从相似数据中还原数据难度小，具体的模型结构如下图所示：
-
+![enter image description here](https://github.com/liangoy/csi_compression_oppo/blob/main/encoder.jpg)
 图表 1编码器结构
-
+![enter image description here](https://github.com/liangoy/csi_compression_oppo/blob/main/decoder.jpg)
 图表 2解码器结构
 
 下面简单介绍一下encoder1、encoder2与encoder3的区别
