@@ -116,16 +116,18 @@ class Dataset(torch.utils.data.Dataset):
 
 ## 代码文件简介
 
-* train01.py encoder0任务1的训练代码
-* train02.py encoder0任务2的训练代码
-* train11.py encoder1任务1的训练代码
-* train12.py encoder1任务2的训练代码
-* train21.py encoder2任务1的训练代码
-* train22.py encoder2任务2的训练代码
-* train31.py encoder3任务1的训练代码
-* train32.py encoder3任务2的训练代码
-* merge.py 将训练结果合并起来，生成最终模型文件
-* modelDesign.py 工具函数以及模型结构
+* train_code/train01.py encoder0任务1的训练代码
+* train_code/train02.py encoder0任务2的训练代码
+* train_code/train11.py encoder1任务1的训练代码
+* train_code/train12.py encoder1任务2的训练代码
+* train_code/train21.py encoder2任务1的训练代码
+* train_code/train22.py encoder2任务2的训练代码
+* train_code/train31.py encoder3任务1的训练代码
+* train_code/train32.py encoder3任务2的训练代码
+* train_code/merge.py 将训练结果合并起来，生成最终模型文件
+* train_code/modelDesign.py 工具函数以及模型结构
+* user_data 存放训练结果
+* raw_data 存放训练数据
 
 ## 训练流程
 
