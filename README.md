@@ -44,7 +44,6 @@ Encoder4不需要训练，其压缩流程为，求出13*8的csi复矩阵的最�
 3. 解压缩，y=encoder(z)
 
 在encoder与decoder确定的情况下，这套流程得到的压缩结果z并不是最优的。最优的z应该为：
-
 $$\mathop{\arg\min}\limits_z{distance}({y\_},{decoder}(z))$$
 
 要计算出这样的z，我们需要穷举所有的z即可。
