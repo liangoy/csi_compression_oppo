@@ -1,6 +1,3 @@
-
-
-
 ## 模型思路
 
 在比赛前期提交的时候，发现线上线下分数差异很大。我们认为线上测试集中存在两种数据，一是见过的数据（与训练集类似的数据），二是没见过的数据（与训练集分布距离大的数据）。
@@ -9,7 +6,7 @@
 
 ### 第一类型的模型
 
-这个类型的模型有三个，分别是modelDesign中的encoder1、encoder2、encoder3。这三个的结构都是类似的。都采用背景法建模，背景法的原理在于：从零还原数据难度大，但是从相似数据中还原数据难度小，具体的模型结构如下图所示：
+这个类型的模型有三个，分别是modelDesign中的encoder1、encoder2、encoder3。这三个的结构都是类似的。都采用背景法建模，背景法的原理在于：从零还原数据难度大，但是从相似数据中还原数据难度小，具体的模型结构如下图所示：  
 <img src="https://github.com/liangoy/csi_compression_oppo/blob/main/encoder.jpg" width="50%" height="50%" />  
 图表 1编码器结构  
 <img src="https://github.com/liangoy/csi_compression_oppo/blob/main/decoder.jpg" width="50%" height="50%" />  
@@ -108,3 +105,20 @@ class Dataset(torch.utils.data.Dataset):
 2. 将压缩问题转化成离散最优化的问题，并提出快速求离散最优值得方案
 
 3. 根据数据在频域上具有高度局部相关性的特点，在transformer上加入卷积，提升了模型表现
+
+## 代码文件简介
+
+* train01.py encoder0任务1的训练代码
+* train02.py encoder0任务2的训练代码
+* train11.py encoder1任务1的训练代码
+* train12.py encoder1任务2的训练代码
+* train21.py encoder2任务1的训练代码
+* train22.py encoder2任务2的训练代码
+* train31.py encoder3任务1的训练代码
+* train32.py encoder3任务2的训练代码
+* merge.py 将训练结果合并起来，生成最终模型文件
+* modelDesign.py 工具函数以及模型结构
+
+## 训练流程
+
+依次调用train01.py,train02.py,..,train32.py完成各个子模型的训练，然后再调用merge.py整理训练结果生成模型文件
