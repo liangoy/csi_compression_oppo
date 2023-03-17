@@ -59,9 +59,9 @@ $$\mathop{\arg\min}\limits_z{\ distance}(y,decoder(z))$$
 
 4.  按照确定程度c对z中的元素重新排列（升序）,结果记为$z_{sorted}$
 
-5.  对$z_{sorted}$，使用beam search求解得到z最优解的排列后的近似解$z_{sorted}^*$
+5.  对 $z_{sorted}$，使用beam search求解得到z最优解的排列后的近似解 $z_{sorted}^*$
 
-6.  对$z_{sorted}^*$逆排列，得到z最优解的近似解$z^*$, $z^*$ 即为最终压缩结果。
+6.  对 $z_{sorted}^*$逆排列，得到z最优解的近似解 $z^*$,  $z^*$ 即为最终压缩结果。
 
 我们所有的模型均在推理时，均采用上述步骤得到压缩结果。
 
