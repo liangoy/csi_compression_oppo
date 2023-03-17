@@ -45,21 +45,21 @@ Encoder4不需要训练，其压缩流程为，求出13*8的csi复矩阵的最�
 3. 解压缩，y=encoder(z)
 
 在encoder与decoder确定的情况下，这套流程得到的压缩结果z并不是最优的。最优的z应该为：
-$$\mathop{\arg\min}\limits_z{\ distance}(y,decoder(z))$$
+$$\mathop{\arg\min}\limits_z{\ distance}(y\_,decoder(z))$$
 
 要计算出这样的z，我们需要穷举所有的z即可。
 
 但穷举的计算速度太慢，所以我们采取了一些措施，可以在短时间内求得接近最优解的z。具体步骤如下：
 
-1.  用encoder(y_)初始化z
+1.  用 $encoder(y\_)$初始化z
 
 2.  根据distance(y_,decoder(z))关于z的梯度更z（z取值范围为0到1），迭代若干轮
 
-3.  计算z的确定程度：，c中的元素越大，代表其对应的z元素的确定度越高。
+3.  计算z的确定程度： $c=\left| z-0.5 \right|$，c中的元素越大，代表其对应的z元素的确定度越高。
 
-4.  按照确定程度c对z中的元素重新排列（升序）,结果记为$z_{sorted}$
+4.  按照确定程度c对z中的元素重新排列（升序）,结果记为 $z_{sorted}$。
 
-5.  对 $z_{sorted}$，使用beam search求解得到z最优解的排列后的近似解 $z_{sorted}^*$
+5.  对 $z_{sorted}$，使用beam search求解得到z最优解的排列后的近似解$z_{sorted}^*$
 
 6.  对 $z_{sorted}^*$逆排列，得到z最优解的近似解 $z^*$,  $z^*$ 即为最终压缩结果。
 
