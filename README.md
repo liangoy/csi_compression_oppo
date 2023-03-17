@@ -55,7 +55,7 @@ $$\mathop{\arg\min}\limits_z{\ distance}(y,decoder(z))$$
 
 2.  根据distance(y_,decoder(z))关于z的梯度更z（z取值范围为0到1），迭代若干轮
 
-3.  计算z的确定程度：$c=\left| z-0.5 \right|$，c中的元素越大，代表其对应的z元素的确定度越高。
+3.  计算z的确定程度：，c中的元素越大，代表其对应的z元素的确定度越高。
 
 4.  按照确定程度c对z中的元素重新排列（升序）,结果记为$z_{sorted}$
 
