@@ -57,7 +57,7 @@ $$\mathop{\arg\min}\limits_z{\ distance}(y,decoder(z))$$
 
 3.  计算z的确定程度：，c中的元素越大，代表其对应的z元素的确定度越高。
 
-4.  按照确定程度c对z中的元素重新排列（升序）,结果记为$z_{sorted}$
+4.  按照确定程度c对z中的元素重新排列（升序）,结果记为$z\_{sorted}$
 
 5.  $z_{sorted}$，使用beam search求解得到z最优解的排列后的近似解$z_{sorted}^*$
 
