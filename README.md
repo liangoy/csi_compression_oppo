@@ -1,3 +1,11 @@
+## 背景
+
+比赛名称：面向小样本条件场景自适应及在线更新需求的无线AI设计
+赛题简介：小样本信道数据压缩，比赛的主要特点是样本少（1000个样本），线上线下分布不一致，考察如何在小样本的场景中解决训练集与实际场景分布不一致的问题
+比赛地址：https://www.datafountain.cn/competitions/624/ranking?isRedance=0&sch=2061
+成绩：  
+<img src="https://github.com/liangoy/csi_compression_oppo/blob/main/score.png" width="50%" height="50%" /> 
+
 ## 模型思路
 
 在比赛前期提交的时候，发现线上线下分数差异很大。我们认为线上测试集中存在两种数据，一是见过的数据（与训练集类似的数据），二是没见过的数据（与训练集分布距离大的数据）。
